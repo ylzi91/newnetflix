@@ -1,0 +1,86 @@
+.black{
+    background-color: black !important;
+}
+
+.red{
+    background-color: red !important;
+}
+
+.logoImg{
+    width: 90px !important;
+}
+
+.textWhite{
+    color: white !important;
+}
+
+.kidsImg{
+    width: 30px !important;
+}
+
+.w-ddm{
+    width: 0 !important;
+}
+
+.myContainer{
+    width: 90% !important;
+    margin: 0 auto !important;
+}
+
+.babyChar{
+    font-size: 0.8em !important;
+}
+
+.midChar{
+    font-size: 0.9em !important;
+}
+
+.myButton:hover{
+    background-color: white !important;
+    color:black !important
+}
+.myButton:focus{
+    background-color: white !important;
+    color:black !important
+}
+
+.myShadow{
+    box-shadow: inset 1px 1px 1px 1px white, inset -1px -1px 1px 1px white;
+}
+
+@media screen and (max-width: 576px) {
+    body{
+
+        font-size: 0.8rem;
+    } 
+    
+}
+@media screen and (min-width: 768px) {
+    .accountMain, .accountFooter{
+        width: 65%;
+        margin: 0 auto;
+    } 
+    
+}
+@media screen and (min-width: 992px) {
+    .accountMain, .accountFooter{
+        width: 55%;
+        margin: 0 auto;
+    } 
+}
+@media screen and (min-width: 1200px) {
+    .accountMain, .accountFooter{
+        width: 45%;
+        margin: 0 auto;
+    } 
+    
+}
+@media screen and (min-width: 1400px) {
+    .accountMain, .accountFooter{
+        width: 35%;
+        margin: 0 auto;
+    } 
+    
+}
+
+
