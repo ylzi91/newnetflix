@@ -1,3 +1,8 @@
+### Leggi Qui
+Se clicchi la lente ti fa partire una ricerca
+Se clicchi su l'cona dell'account vedi la pagina account
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
