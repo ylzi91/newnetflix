@@ -1,6 +1,5 @@
 import { Component } from "react";
 import { ListGroup } from "react-bootstrap";
-import netflixLogo from '../assets/media/netflix_logo.png'
 
 export default class Search extends Component {
 
