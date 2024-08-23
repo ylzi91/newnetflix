@@ -1,5 +1,6 @@
 import { Component } from "react";
 import { ListGroup } from "react-bootstrap";
+import netflixLogo from '../assets/media/netflix_logo.png'
 
 export default class Search extends Component {
 
@@ -20,6 +21,7 @@ export default class Search extends Component {
         const response = await fetch(
           `https://www.omdbapi.com/?apikey=${this.key}&s=${this.state.titleS}`
         );
+        
         const lista = await response.json();
         const arrayTemp = [];
         arrayTemp.push(lista.Search);
@@ -33,14 +35,21 @@ export default class Search extends Component {
     };
 
   render() {
+    console.log(this.state.titleS)
+    console.log(this.props.mySearch)
+    if (this.props.mySearch != this.state.titleS){
+        this.getFilmFrom()
+    }
+    console.log('Lista film',this.state.listFilm)
+    
 
         return (
             
-        <ListGroup className=" w-50 position-absolute mt-5 start-50 z-1">
-
-        {this.state.listFilm.map (film => {
+        <ListGroup style={{maxHeight: '200px'}} className=" h-25 w-50 position-absolute mt-5 start-50 z-1">
+        
+        {!this.state.listFilm ? '' : this.state.listFilm.map (film => {
             return (
-                <ListGroup.Item>{film.Title}</ListGroup.Item>
+                <ListGroup.Item> <img style={{width: '50px'}} src = {film.Poster} />{film.Title}</ListGroup.Item>
               
             )
         })}
