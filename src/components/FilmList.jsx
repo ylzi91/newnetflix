@@ -37,7 +37,7 @@ export default class FilmList extends Component {
         <>
         
         <div className="col-xxl-2 col-xl-4 col-md-6 col-sm-6 col-12 position-relative">
-           <img className="img-fluid" src={film.Poster} alt="" />
+           <img className="img-fluid zoomImg" src={film.Poster} alt="" />
         </div>
         </>
       );

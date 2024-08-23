@@ -48,6 +48,15 @@
     box-shadow: inset 1px 1px 1px 1px white, inset -1px -1px 1px 1px white;
 }
 
+.zoomImg:hover {
+    transform: scale(1.1);
+}
+
+.zoomImg {
+    transition: transform 0.3s ease-in-out;
+}
+
+
 @media screen and (max-width: 576px) {
     body{
 
