@@ -1,14 +1,15 @@
 import { Component } from "react";
+import avatar from '../assets/media/avatar.png'
 
 export default class Account extends Component {
     render(){
         return (
-            <main class="mb-3 accountMain black text-light">
+            <main class="mb-3 accountMain black text-light w-100">
             <div class="container-sm container-xl-fluid w-100 mx-auto">
                 <h1 class="border-1 border-bottom border-light border-opacity-25 pb-3">Edit Profile</h1>
                 <div class="row mt-3 border-1 border-bottom border-light border-opacity-25 pb-3">
                     <div class="col-4 position-relative">
-                        <img class="img-fluid " src="assets/media/avatar.png" alt="" />
+                        <img class="img-fluid " src= {avatar} alt="" />
                         <i class="bi bi-pencil myShadow position-absolute start-0 ms-3 mt-1 bg-black rounded-circle px-2 py-1 border-1"></i>
                     </div>
                     

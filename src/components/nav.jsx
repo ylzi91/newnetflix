@@ -2,15 +2,28 @@ import { Component } from "react";
 import netflixLogo from '../assets/media/netflix_logo.png'
 import kidsIcon from '../assets/media/kids_icon.png'
 import Search from "./Search";
+import { Modal } from "react-bootstrap";
+import Account from "./Account";
 
 export default class MyNav extends Component {
     state = {
         compare: false,
-        titleSearch: ''
+        titleSearch: '',
+        show: false
+
+
     }
+    handleClose = () => {
+        this.setState({ ...this.state, show: false });
+      };
+    
+      handleShow = () => {
+        this.setState({...this.state, show: true });
+      };
 
     render(){
         return (
+            <>
             <nav className="navbar navbar-expand-lg black" data-bs-theme="dark">
             <div className="container-fluid">
                 <a className="navbar-brand" href="#"><img className="logoImg" src={netflixLogo} alt="" /></a>
@@ -66,16 +79,32 @@ export default class MyNav extends Component {
                             <a className="nav-link active" href="#" aria-disabled="true"><i className="bi bi-bell-fill"></i></a>
                         </li>
                         <li className="nav-item dropdown">
-                            <a className="nav-link dropdown-toggle py-1" href="#" role="button" data-bs-toggle="dropdown"
+                            <button className="nav-link dropdown-toggle py-1" onClick={this.handleShow}
                                 aria-expanded="false">
                                 <img className="kidsImg align-self-center" src={kidsIcon} alt="" />
-                            </a>
+                            </button>
                         </li>
 
                     </ul>
                 </div>
             </div>
+        <Modal
+        show={this.state.show}
+        onHide={this.handleClose}
+        backdrop="static"
+        keyboard={false}
+     className=" shadow">
+        <Modal.Header closeButton>
+        </Modal.Header>
+        <Modal.Body className="black">
+            <Account />
+
+        </Modal.Body>
+
+ 
+      </Modal>
         </nav>
+      </>
         )
     }
 }
